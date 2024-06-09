@@ -55,7 +55,7 @@ def predictRoute():
         result = "Invalid input"
 
     return jsonify(result)
-
+#test
 
 if __name__ == "__main__":
     clApp = ClientApp()
