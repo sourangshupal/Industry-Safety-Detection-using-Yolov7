@@ -2,7 +2,6 @@
 
 dill==0.3.5.1
 from-root==1.0.2
-notebook==7.0.0a7
 boto3
 mypy-boto3-s3
 flask-cors
