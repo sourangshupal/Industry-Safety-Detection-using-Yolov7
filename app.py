@@ -21,7 +21,7 @@ class ClientApp:
 def trainRoute():
     obj = TrainPipeline()
     obj.run_pipeline()
-    return 
+    return "Training Successful"
     
 
 
