@@ -4,6 +4,7 @@ from isd.exception import isdException
 from isd.utils.main_utils import decodeImage, encodeImageIntoBase64
 from flask import Flask, request, jsonify, render_template,Response
 from flask_cors import CORS, cross_origin
+from isd.configuration.s3_operations import S3Operation
 
 
 
@@ -37,6 +38,7 @@ def predictRoute():
     try:
         image = request.json['image']
         decodeImage(image, clApp.filename)
+        modeldownloader = S3Operation.download_object(key="AKIAU6GD2BQL3YCX7HCA",bucket_name="isd-dataset",filename="best.pt")
 
        
         os.system("cd yolov7/ && python detect.py --weights my_model.pt  --source ../data/inputImage.jpg")
