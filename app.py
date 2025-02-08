@@ -22,7 +22,6 @@ def trainRoute():
     obj = TrainPipeline()
     obj.run_pipeline()
     return "Training Successful"
-    
 
 
 @app.route("/")
